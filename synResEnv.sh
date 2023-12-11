@@ -15,6 +15,15 @@
 # Definir las variables
 #!/bin/bash
 # Prerequisit apt install rsync
+if ! command -v rsync &> /dev/null; then
+    echo "El paquet rsync no est instal·lat. Intentant instal·lar..."    
+    if sudo apt-get install -y rsync; then
+        echo "rsync instal·lat correctament."
+    else
+        echo "No es pot instal·lar rsync. Si us plau, fes l'instal·lacio manualment."
+        exit 1
+    fi
+fi
 
 # Definir variables
 

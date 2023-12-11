@@ -14,6 +14,7 @@
 # Inici del script
 # Definir las variables
 #!/bin/bash
+# Prerequisit apt install rsync
 
 # Definir variables
 
